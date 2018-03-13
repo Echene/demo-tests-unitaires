@@ -1,11 +1,6 @@
-/**
- * 
- */
-package main.java.dev.utils;
+package dev.utils;
 
-**Classe qui fournit des services de traitements de chaines de caractères
-*@author DIGINAMIC
-*/
+
 	
 public final class StringUtils {
 	
@@ -15,9 +10,12 @@ public final class StringUtils {
 	* @param rhs chaine 2
 	* @return distance
 	*/
-	
 	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) {
 			
+		if(lhs == null || rhs == null) {
+			return -1;
+		}
+		
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
 	
